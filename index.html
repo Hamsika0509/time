@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<title>
+
+</title>
+<div class="ctr">
+<head>
+    <link rel="stylesheet" href="task2.css">
+   
+    <style> body {
+      padding: 25px;
+      background-color:rgb(219, 219, 251);
+      color: black;
+      font-size: 25px;
+    }
+    
+    .dark-mode {
+      background-color:rgb(175, 156, 211);
+      color: white;
+    }
+    </style>
+ 
+</head>
+  <nav>
+   <ul>
+    
+    <li><a href="index.html"  style="color: #050A30; 
+      font-size:25px;
+       margin: 25px; 
+      ">Home</a></li>
+    <li><a href="change.html"  style="color: #050A30; 
+        font-size:25px;
+         margin: 25px; 
+        ">Change Format</a></li>
+    
+      <li><div id="h">
+        &nbsp &nbsp 
+        &nbsp &nbsp 
+        &nbsp &nbsp 
+
+      <input  id="clickMe" type="button" value=" Change Theme" onclick="darkMode();" />
+    </div></li>
+    
+   </ul>
+<br>
+    </nav>
+  </div>
+  <br>
+  
+    <div class="box1">
+    
+      <br>
+        <div id="B">
+            </div>
+          
+            <div id="fu">  
+              <br>        
+             <div id="clock">
+                <h1 >Current Time</h1> 
+
+                <div id="box2">                     
+                 <script src="task2.js">                 
+                 </script>
+                </div>    
+            </div> 
+            <br> 
+            <audio id="myAudio">              
+              <source src="beep.mp3">           
+              </audio>
+        <script>
+          function audio(){
+            var sound = document.getElementById("myAudio");
+           let dd= new Date();
+           let h=dd.getMinutes();
+           let m=dd.getSeconds();
+           if(h==0&&m==0){
+            sound.play();
+           }
+          }
+          setInterval(audio,1000);
+          </script>
+        <script>
+              function darkMode() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+              }
+             
+               
+        </script>
+            
+            </div>
+            </div> 
+    </div> 
+
+</div>
+
+</html>
